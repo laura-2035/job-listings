@@ -1,0 +1,39 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.job-wrapper{
+    @include flexContent(center, center, column);
+}
+.job-card{
+    background-color: white;
+    width: 85%;
+    margin: 1em auto;
+    border-radius: .3em;
+    & > * {
+        margin: auto 1.5em;
+    }
+    .company-wrapper{
+        @include flexContent(center, flex-start, row);
+        .job-tag{
+            background: $primary-color;
+        }
+    }
+    .company-logo{
+        margin-top: -1.8em;
+        img {
+            width: min(20%, 15vh);
+        }
+    }
+    .divider{
+        width: 85%;
+        border-bottom: 1px $info-color solid;
+        opacity: 50%;
+    }
+    .job-lang-tool{
+        border: none;
+        background-color: $filter-color;
+        padding: .5em .5em;
+        border-radius: .3em;
+        margin: 0 1em 1em 0; 
+    }
+}

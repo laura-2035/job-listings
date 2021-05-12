@@ -1,0 +1,30 @@
+@import './scss/utils/typography';
+@import './scss/utils/variables';
+@import './scss/utils/mixins';
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 15px;
+    font-family: 'Spartan', monospace;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    background-color: $bg-color;
+    height: 100%;
+    .top-bg{
+        background-color: $primary-color;
+        // background-image: url('./images/bg-header-mobile.svg');
+        // background-repeat: no-repeat;
+        // background-position-x: center;
+        width: 100%;
+        @include flexContent(center, center, row);
+        margin-bottom: 10%;
+        
+    } 
+}
