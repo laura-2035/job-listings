@@ -32,13 +32,13 @@ export default class Job extends Component{
 
         const renderNew = () => {
             if(job.new){
-                return <span className="job-tag new">New</span>
+                return <div className="job-tag new">New!</div>
             }
         }
 
         const renderFeatured = () =>{
             if(job.featured){
-                return <span className="job-tag featured">Featured</span>
+                return <div className="job-tag featured">Featured</div>
             }
         }
         const renderLanguages = job.languages.map((lang)=>{
@@ -65,7 +65,6 @@ export default class Job extends Component{
                 <div className="job-info">
                     <div className="title-wrapper">
                         <h3 className="job-position">{job.position}</h3>
-                        
                     </div>
                     <div className="job-additional-info">
                         <span><p>{job.postedAt}</p></span>

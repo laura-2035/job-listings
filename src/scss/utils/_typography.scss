@@ -14,12 +14,14 @@
 
 .company-name{
     color: $primary-color;
-    font-size: .9em;
+    font-size: .8em;
+    font-weight: 700;
 }
 .job-tag{
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.6em;
+
 }
 .job-additional-info{
     color: $info-color;

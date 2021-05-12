@@ -10,13 +10,13 @@
 body{
     font-size: 15px;
     font-family: 'Spartan', monospace;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
 }
 
 .container{
     background-color: $bg-color;
     height: 100%;
+    width: 100%;
     .top-bg{
         background-color: $primary-color;
         // background-image: url('./images/bg-header-mobile.svg');
