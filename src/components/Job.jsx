@@ -67,9 +67,9 @@ export default class Job extends Component{
                         <h3 className="job-position">{job.position}</h3>
                     </div>
                     <div className="job-additional-info">
-                        <span><p>{job.postedAt}</p></span>
-                        <span><p>{job.contract}</p></span>
-                        <span><p>{job.location}</p></span>
+                        <span><p> {job.postedAt} &bull; </p></span>
+                        <span><p> {job.contract} &bull; </p></span>
+                        <span><p> {job.location} </p></span>
                     </div>
                 </div>
                 <div className="divider"></div>
