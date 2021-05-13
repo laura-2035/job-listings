@@ -21,17 +21,18 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.6em;
-
+}
+.job-position{
+    font-size: .9em;
 }
 .job-additional-info{
     color: $info-color;
     @include flexContent(center, flex-start, row);
+    font-size: 0.7em;
 }
 .job-lang-tool{
     color: $primary-color;
     font-weight: 700;
     letter-spacing: .05em;
 }
-.job-position{
-    font-size: .85em;
-}
+
