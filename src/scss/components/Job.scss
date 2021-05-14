@@ -3,14 +3,21 @@
 
 .job-wrapper{
     @include flexContent(center, center, column);
+    gap: 1em;
 }
 .job-card{
     background-color: white;
     width: 80%;
     margin: 1em auto;
     border-radius: .3em;
+    box-shadow: -1px 9px 17px 4px rgba(91,164,164,0.24);
+    @include flexContent(stretch, center, row);
+    
     & > * {
         margin: 1em 1.5em;
+    }
+    .job-card-wrapper{
+        flex-grow: 1;
     }
     .company-wrapper{
         margin-top: 0;
@@ -41,6 +48,11 @@
             width: min(20%, 15vh);
         }
     }
+    .job-position:hover{
+        color: $primary-color;
+        cursor: pointer;
+        
+    }
     .job-info{
         & > *{
             margin-top: .5em;
@@ -55,11 +67,13 @@
         border-bottom: 1px $info-color solid;
         opacity: 50%;
     }
-    .job-lang-tool{
-        border: none;
-        background-color: $filter-color;
-        padding: .5em .6em;
-        border-radius: .3em;
-        margin: 0 1em 1em 0; 
-    }
+    
+}
+.featured-card{
+    height: auto;
+    width: .5em;
+    background-color: $primary-color;
+    margin: 0;
+    
+    
 }

@@ -1,3 +1,58 @@
 @import '../utils/typography';
 @import '../utils/variables';
 
+.filters{
+    background-color: white;
+    width: 80%;
+    margin: -8em auto 2.5em auto;
+    border-radius: .3em;
+    z-index: 9;
+    position: relative;
+    top: 0;
+    box-shadow: -1px 9px 17px 4px rgba(91,164,164,0.24);
+    @include flexContent(center, center, row);
+    & > * {
+        margin: 1.5em 1.5em 1em 1.5em;
+    }
+    .filters-wrapper{
+        flex-grow: 1;
+        margin-right: 0;
+    }
+    .clear-button{
+        border: none;
+        background-color: white;
+    }
+    
+    
+}
+.filter{
+    border: none;
+    background-color: $filter-color;
+    padding: .5em .6em;
+    border-radius: .3em;
+    margin: 0 1em 1em 0; 
+    &:hover{
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+    }
+}
+.filter-block{
+    display: inline-flex;
+    margin: .3em;
+    .filter{
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .remove-filter{
+        background-color: $primary-color;
+        border-top-right-radius: .3em;
+        border-bottom-right-radius: .3em;
+        padding: .4em .5em;
+        &:hover{
+            background-color: $job-title-color;
+            cursor: pointer;
+        }
+    }
+}

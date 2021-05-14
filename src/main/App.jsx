@@ -7,8 +7,10 @@ export default props =>{
             <div className="top-bg">
                 <img src={backgroundImage}></img>
             </div>
-            {/* <Filter></Filter> */}
-             <Job></Job>
+            <main>
+                <Filter></Filter> 
+                <Job></Job>
+            </main>
         </div>
     )
 }

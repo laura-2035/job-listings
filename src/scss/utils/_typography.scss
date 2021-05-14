@@ -30,9 +30,24 @@
     @include flexContent(center, flex-start, row);
     font-size: 0.7em;
 }
-.job-lang-tool{
+.filter{
     color: $primary-color;
     font-weight: 700;
     letter-spacing: .05em;
 }
+.remove-filter{
+    font-weight: 700;
+    color: white;
+}
+.clear-button{
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: $info-color;
+}
+.clear-button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: $primary-color;
+}
+
 

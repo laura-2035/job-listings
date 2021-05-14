@@ -6,7 +6,7 @@ import '../scss/components/Job.scss'
 
 //Variable to store all languages and tools
 let arrayLangTools = []
-
+let featuredCard
 export default class Job extends Component{
 
     constructor(props){
@@ -35,32 +35,41 @@ export default class Job extends Component{
                 return <div className="job-tag new">New!</div>
             }
         }
-
-        const renderFeatured = () =>{
+        
+        const renderFeaturedTag = () => {
             if(job.featured){
                 return <div className="job-tag featured">Featured</div>
             }
         }
+        const renderFeaturedCard = () => {
+            if(job.featured){
+                return <div className="featured-card"></div>
+            }
+        }
+        
+       
         const renderLanguages = job.languages.map((lang)=>{
             //Obtaining the languages
             this.arrayLangTools = !arrayLangTools.includes() ? arrayLangTools.push(lang) : ''
-            return <button className="job-lang-tool">{lang}</button> 
+            return <button className="filter">{lang}</button> 
          })
         const renderTools = job.tools.map((tools)=>{ 
             //Obtaining the tools
             this.arrayLangTools = !arrayLangTools.includes() ? arrayLangTools.push(tools) : ''
-            return <button className="job-lang-tool">{tools}</button>
+            return <button className="filter">{tools}</button>
          })
        
         return (
             <div className="job-card">
+                {renderFeaturedCard()}
+                <div className="job-card-wrapper">
                 <div className="company-logo">
                     <img src={job.logo}></img>
                 </div>
                 <div className="company-wrapper">
                     <p className="company-name">{job.company}</p>
                     {renderNew()}
-                    {renderFeatured()}
+                    {renderFeaturedTag()}
                 </div>
                 <div className="job-info">
                     <div className="title-wrapper">
@@ -76,11 +85,13 @@ export default class Job extends Component{
                 </div>
                 <div className="divider"></div>
                 <div className="filter-tags">
-                    <button className="job-lang-tool">{job.role}</button> 
-                    <button className="job-lang-tool">{job.level}</button> 
+                    <button className="filter">{job.role}</button> 
+                    <button className="filter">{job.level}</button> 
                     {renderLanguages}
                     {renderTools}
                 </div>
+                </div>
+                
             </div>
         )
     }
