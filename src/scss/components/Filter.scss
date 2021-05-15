@@ -21,6 +21,7 @@
     .clear-button{
         border: none;
         background-color: white;
+        margin: 0 1em 0 0;
     }
     
     
@@ -39,7 +40,8 @@
 }
 .filter-block{
     display: inline-flex;
-    margin: .3em;
+    margin: 0 1em 1em 0; 
+
     .filter{
         margin: 0;
         border-top-right-radius: 0;

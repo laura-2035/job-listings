@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import JobData from '../data/data.json'
 import '../scss/components/Job.scss'
 
 
 //Variable to store all languages and tools
 let arrayLangTools = []
-let featuredCard
+
 export default class Job extends Component{
 
     constructor(props){
         super(props)
         this.state = {
-            items: []
+            intial: ['Oi', 'watashi wa josé desu'],
+            current: []
         }   
     }
     
@@ -26,6 +26,15 @@ export default class Job extends Component{
                 
             </div>
         )
+    }
+    updateState(param){
+        //Checking if the filter is already in the list
+        if(!this.state.current.includes(param)){
+            this.setState(prevState => ({
+                current: [...prevState.current, param] 
+            }))
+        }
+        console.log(this.state)
     }
     jobCardRender(job){
         
@@ -58,7 +67,7 @@ export default class Job extends Component{
             this.arrayLangTools = !arrayLangTools.includes() ? arrayLangTools.push(tools) : ''
             return <button className="filter">{tools}</button>
          })
-       
+         
         return (
             <div className="job-card">
                 {renderFeaturedCard()}
@@ -85,8 +94,8 @@ export default class Job extends Component{
                 </div>
                 <div className="divider"></div>
                 <div className="filter-tags">
-                    <button className="filter">{job.role}</button> 
-                    <button className="filter">{job.level}</button> 
+                    <button className="filter" onClick={() => {this.updateState('Jussara')}}>{job.role}</button> 
+                    <button className="filter" onClick={() => {this.updateState('Claudia')}}>{job.level}</button> 
                     {renderLanguages}
                     {renderTools}
                 </div>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../scss/components/Filter.scss'
+
+
 //Intial state
 const instialState = {
     filters: []
