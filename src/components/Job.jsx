@@ -8,13 +8,13 @@ let arrayLangTools = []
 
 export default class Job extends Component{
 
-    constructor(props){
-        super(props)
-        this.state = {
-            intial: ['Oi', 'watashi wa josé desu'],
-            current: []
-        }   
-    }
+    // constructor(props){
+    //     super(props)
+    //     this.state = {
+    //         intial: ['Oi', 'watashi wa josé desu'],
+    //         current: []
+    //     }   
+    // }
     
     getJobs(){
         return(
@@ -27,15 +27,15 @@ export default class Job extends Component{
             </div>
         )
     }
-    updateState(param){
-        //Checking if the filter is already in the list
-        if(!this.state.current.includes(param)){
-            this.setState(prevState => ({
-                current: [...prevState.current, param] 
-            }))
-        }
-        console.log(this.state)
-    }
+    // updateState(param){
+    //     //Checking if the filter is already in the list
+    //     if(!this.state.current.includes(param)){
+    //         this.setState(prevState => ({
+    //             current: [...prevState.current, param] 
+    //         }))
+    //     }
+    //     console.log(this.state)
+    // }
     jobCardRender(job){
         
 
@@ -94,8 +94,8 @@ export default class Job extends Component{
                 </div>
                 <div className="divider"></div>
                 <div className="filter-tags">
-                    <button className="filter" onClick={() => {this.updateState('Jussara')}}>{job.role}</button> 
-                    <button className="filter" onClick={() => {this.updateState('Claudia')}}>{job.level}</button> 
+                    <button className="filter" >{job.role}</button> 
+                    <button className="filter" >{job.level}</button> 
                     {renderLanguages}
                     {renderTools}
                 </div>

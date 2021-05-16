@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import '../scss/components/Filter.scss'
 
 
@@ -7,9 +7,7 @@ const instialState = {
     filters: []
 }
 
-export default class Filter extends Component{
-    
-    render(){
+function Filter (){
         return (
             <div className="filters">
                 <div className="filters-wrapper">
@@ -21,5 +19,6 @@ export default class Filter extends Component{
                 <button className="clear-button">Clear</button>
             </div>
             )
-    }
+    
 }
+export default Filter
