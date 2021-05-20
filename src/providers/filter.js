@@ -5,12 +5,12 @@ export const FilterContext = React.createContext({})
 
 //Creating the provider and setting their initial values
 export const FilterProvider = (props) =>{
-    const [filter, setFilter] = useState({
+    const [filters, setFilter] = useState({
         current: [],
     })
 
     return (
-        <FilterContext.Provider value={{filter, setFilter}}>
+        <FilterContext.Provider value={{filters, setFilter}}>
             {props.children}
         </FilterContext.Provider>
     )

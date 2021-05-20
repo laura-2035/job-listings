@@ -1,36 +1,45 @@
 import React, { Component } from 'react'
 import JobData from '../data/data.json'
-import { useFilter } from '../providers/filter'
+import { FilterProvider, useFilter } from '../providers/filter'
 import '../scss/components/Job.scss'
 import Button from './Button'
+import Filter from './Filter'
 
 const Job = () => {
-	let arrayLangTools = new Set()
-	const { filter, setFilter } = useFilter()
-
-	const getFiltersFromData = () => {
-		return (
-			JobData.map(({ position, role, languages, tools }) => {
-				arrayLangTools.add(position)
-				arrayLangTools.add(role)
-				arrayLangTools.add(languages)
-				arrayLangTools.add(tools)
-				return arrayLangTools
-			})
-		)
-	}
+	
+	const { filters} = useFilter()
+	const filterList = [...filters.current]
 	const getJobs = () => {
+	const excludeColumns = ['id', 'company', 'logo', 'new', 'featured', 'position', 'postedAt', 'contract', 'location']	
+		const getJobsByFilter = () =>{
+			if(filterList.length ===  0){	
+				return JobData.map((job) => {
+					return jobCardRender(job)			
+				})
+			}else{
+				let filteredData
+				filterList.forEach((filterItem)=>{
+					filteredData = JobData.filter(item =>{
+						return Object.keys(item).some(key =>
+							excludeColumns.includes(key) ? false : item[key].toString().includes(filterItem)	
+						)
+					})
+				} )
+				
+				return filteredData.map((job) => {
+					return jobCardRender(job)	
+				})
+			}
+		}
 		return (
 			<div className="job-wrapper">
-				{JobData.map((job) => {
-					return jobCardRender(job)
-				})}
+				{getJobsByFilter()}
 			</div>
 		)
 	}
 
 	const jobCardRender = (job) => {
-
+		//Need to rewrite the code, using a map to display the elements
 		const renderNew = () => {
 			if (job.new) {
 				return <div className="job-tag new">New!</div>

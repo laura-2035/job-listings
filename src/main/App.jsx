@@ -8,7 +8,7 @@ function App(){
     
     return(
         <FilterProvider>
-            <Teste></Teste>
+            {/* <Teste></Teste> */}
         <div className="container">
             <div className="top-bg">
                 <img src={backgroundImage}></img>
