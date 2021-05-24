@@ -2,7 +2,7 @@ import '../scss/components/Button.scss'
 import {useFilter} from '../providers/filter'
 
 
-export default (props) => {
+function Button (props){
 
     const { filters, setFilter } = useFilter()
     
@@ -25,12 +25,23 @@ export default (props) => {
         }
     }
 
+    const removeAll = () =>{
+        
+        setFilter({
+            current: []
+        })
+    }
+
 
     if(props.op === 'add'){
         return <button className="filter" onClick={() => addFilter(props.value)}>{props.value}</button>
-    }else{
+    }else if(props.op === 'clear'){
+        return <button className="clear-button" onClick={() => removeAll()}>Clear</button>
+    }
+    else{
         return <div className="filter-block"><button className="filter" >{props.value}</button><span className="remove-filter" onClick={() => removeFilter(props.value)}>x</span></div>
 
     }
     
 }
+export default Button

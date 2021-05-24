@@ -1,5 +1,6 @@
 @import '../utils/typography';
 @import '../utils/variables';
+@import '../utils/animations';
 
 .filter{
     border: none;
@@ -11,5 +12,27 @@
         background-color: $primary-color;
         color: white;
         cursor: pointer;
+        animation: bounce 400ms;
+    }
+    &:active{
+        animation: bounce 200ms;
+        
     }
 }
+.remove-filter{
+    background-color: $primary-color;
+    border-top-right-radius: .3em;
+    border-bottom-right-radius: .3em;
+    padding: .4em .5em;
+    &:hover{
+        background-color: $job-title-color;
+        cursor: pointer;
+        
+    }
+}
+.clear-button{
+    border: none;
+    background-color: white;
+    margin: 0 4% 0 0;
+}
+

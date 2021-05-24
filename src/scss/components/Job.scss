@@ -15,8 +15,9 @@
     
     .job-card-wrapper{
         flex-grow: 1;
+        margin-left: 2%;
         & > * {
-            margin: 1em 1.5em;
+            margin: 1.5em 1em;
         }
     }
     .company-wrapper{
@@ -29,7 +30,7 @@
             color: white;
             @include flexContent(center, center, column);
             
-            padding: .6em .6em .3em .6em;
+            padding: .7em .7em .4em .7em;
             text-align: center;
             margin-left: 1em;
             
@@ -45,7 +46,7 @@
     .company-logo{
         margin-top: -1.8em;
         img {
-            width: min(20%, 15vh);
+            width: max(3.5em, 8vw);
         }
     }
     .job-position:hover{
@@ -57,10 +58,10 @@
         & > *{
             margin-top: .5em;
             margin-bottom: 1em;
-        }
-        .job-additional-info{
-            gap: .5em;
-        }
+        }  
+    }
+    .job-additional-info{
+        gap: .5em;
     }
     .divider{
         width: 85%;
@@ -77,5 +78,30 @@
     margin: 0;
     border-top-left-radius: .3em;
     border-bottom-left-radius: .3em;
-   
+}
+
+@media screen and (min-width: 960px){
+    
+    .job-card{
+        
+        .job-card-wrapper{
+            @include flexContent(center, flex-start, row);
+            .company-logo{
+                margin-top: 1.5em;
+                margin-left:0;
+                img {
+                    width: clamp(2em, 6vw, 30vh);
+                }
+            }
+            .info{
+                flex-grow: 1;
+            }
+        }
+        .job-additional-info{
+            gap: 1em;
+        }
+        .divider{
+            display: none;
+        }
+    }
 }

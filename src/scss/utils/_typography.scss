@@ -14,35 +14,38 @@
 
 .company-name{
     color: $primary-color;
-    font-size: .8em;
+    font-size: clamp(.8em, .8vw, 30vh);
     font-weight: 700;
 }
 .job-tag{
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.6em;
+    font-size: clamp(.6em, .6vw, 30vh);
 }
 .job-position{
-    font-size: .9em;
+    font-size: clamp(.9em, 1.1vw, 30vh);
 }
 .job-additional-info{
     color: $info-color;
     @include flexContent(center, flex-start, row);
-    font-size: 0.7em;
+    font-size: clamp(.8em, .8vw, 30vh);
 }
 .filter{
     color: $primary-color;
     font-weight: 700;
     letter-spacing: .05em;
+    font-size: clamp(.8em, 1vw, 30vh);
 }
 .remove-filter{
     font-weight: 700;
     color: white;
+    font-size: clamp(.8em, 1vw, 30vh);
 }
 .clear-button{
     font-weight: 700;
     letter-spacing: .05em;
     color: $info-color;
+    font-size: clamp(.8em, 1vw, 30vh);
 }
 .clear-button:hover{
     text-decoration: underline;

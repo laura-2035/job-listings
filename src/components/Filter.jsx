@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
 import '../scss/components/Filter.scss'
 import { useFilter } from '../providers/filter'
 import Button from './Button'
+
 function Filter() {
 
     const { filters} = useFilter()
@@ -21,7 +21,7 @@ function Filter() {
                         {renderButtons()}         
                         {/* <div className="filter-block"><button className="filter">HTML</button><span className="remove-filter">x</span></div> */}
                     </div>
-                    <button className="clear-button">Clear</button>
+                    <Button op="clear"></Button>
                 </div>
             )
         }else{

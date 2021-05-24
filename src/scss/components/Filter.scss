@@ -11,19 +11,17 @@
     top: 0;
     box-shadow: -1px 9px 17px 4px rgba(91,164,164,0.24);
     @include flexContent(center, center, row);
+    animation: fadeIn 100ms;
+    &:after{
+        animation: fadeIn 100ms reverse;
+    }
     & > * {
         margin: 1.5em 1.5em 1em 1.5em;
     }
     .filters-wrapper{
-        flex-grow: 1;
-        margin-right: 0;
+        flex-grow: 1; 
+        margin-top: 2em;
     }
-    .clear-button{
-        border: none;
-        background-color: white;
-        margin: 0 1em 0 0;
-    }
-    
     
 }
 
@@ -36,14 +34,5 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
-    .remove-filter{
-        background-color: $primary-color;
-        border-top-right-radius: .3em;
-        border-bottom-right-radius: .3em;
-        padding: .4em .5em;
-        &:hover{
-            background-color: $job-title-color;
-            cursor: pointer;
-        }
-    }
+    
 }
