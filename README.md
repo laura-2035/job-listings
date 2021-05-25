@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Job Listings with filtering](https://github.com/laura-2035/job-listings)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://laura-2035-job-list.netlify.app/)
 
 ## My process
 
