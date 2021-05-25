@@ -6,7 +6,6 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,8 +14,6 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,85 +25,77 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Job Listings with filtering](https://github.com/laura-2035/job-listings)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+
+The development process that I used in this project, in short was:
+
+  - Create the components Job, Filter, Button
+  - Get the data from the JSON file 
+  - Define the HTML elements
+  - Define the style of variables, typography and create mixins
+  - Define the style of the components
+  - Create a customized hook using context to store the filters
+  - Implement button functions, add, remove, clear
+  - Adjust the layout for desktop
+  - Create animations
+
+My focus on this project was learning more about some React and JS features, so I will skip CSS and HTML details.
+I decided to divide my project into three components:
+  - Job, displays all the information about the jobs according the filter. 
+  - Filter, display all filters being used.
+  - Button, generate a button according to the paramaters and implement the operations to add/remove and clear the filters.
+
+My main ideia was creating a filter list that can comunicate with other components without using parameters/props, I already knew about the React states but I didn't know how to create a global state, after some search I found the Context API that allows to share global data. It was needed to create a provider for the filter, that includes the context and the state.
+
+The first attempt to create the addFilter() and removeFilter() was using the data without any manipulation, I tried to implement it
+using Object.keys() but when a value has an array the filters didn't work as intended, I've lost too many time trying to figured out how to do this, in the end I just gave up and thought in another solution.
+
+In the second attempt I took the easiest way, after loading the job object from file I used the method Object.assing() and create a new property(array) called "filters" containing the "role", "level", "languages" and "tools" on it, then I just needed to check if the 
+job.filters has all the filters stored on the state.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
+- React Context API and Hooks
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [SCSS](https://sass-lang.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- The basics of Context API, Providers and Hooks
+- Object.assign method
+- Every and some methods
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I need to study and use more modern Javascript, sometimes I get myself writing a lot of code using vanilla Javascript, when I could solve the same problem using fewer lines of code.
+Learn more about Hooks and Context.
+Organize my CSS with more variables and reusable code.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 1](https://www.cluemediator.com/search-filter-for-multiple-object-in-reactjs) - This helped me on my first attempt, and thanks for this example a learned about some() and every().
+- [Example resource 2](https://reactjs.org/docs/context.html)
+- [Example resource 3](https://reactjs.org/docs/hooks-state.html)
+- [Example resource 4](https://reactjs.org/docs/context.html#contextprovider)
+  React documentation explaining about Context, Hooks and Provider, very useful if you are beginner.
+- [Example resource 3](https://desenvolvimentoparaweb.com/javascript/every-some-find-includes-javascript/) - Article in PORTUGUESE explaining about the every(), some(), find() and includes() methods 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Github - (https://github.com/laura-2035)
+- Frontend Mentor - [@laura-2035](https://www.frontendmentor.io/profile/laura-2035)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

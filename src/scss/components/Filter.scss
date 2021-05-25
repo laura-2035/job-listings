@@ -1,6 +1,7 @@
 @import '../utils/typography';
 @import '../utils/variables';
 
+
 .filters{
     background-color: white;
     width: 80%;
@@ -12,9 +13,7 @@
     box-shadow: -1px 9px 17px 4px rgba(91,164,164,0.24);
     @include flexContent(center, center, row);
     animation: fadeIn 100ms;
-    &:after{
-        animation: fadeIn 100ms reverse;
-    }
+   
     & > * {
         margin: 1.5em 1.5em 1em 1.5em;
     }
@@ -25,14 +24,3 @@
     
 }
 
-.filter-block{
-    display: inline-flex;
-    margin: 0 1em 1em 0; 
-
-    .filter{
-        margin: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    
-}

@@ -1,5 +1,6 @@
 @import '../utils/mixins';
 @import '../utils/variables';
+@import '../utils/animations';
 
 .job-wrapper{
     @include flexContent(center, center, column);
@@ -11,13 +12,14 @@
     margin: 1em auto;
     border-radius: .3em;
     box-shadow: -1px 9px 17px 4px rgba(91,164,164,0.24);
+    animation: fadeIn 800ms;
     @include flexContent(stretch, center, row);
     
     .job-card-wrapper{
         flex-grow: 1;
         margin-left: 2%;
         & > * {
-            margin: 1.5em 1em;
+            margin: 2em 1em;
         }
     }
     .company-wrapper{
@@ -49,11 +51,7 @@
             width: max(3.5em, 8vw);
         }
     }
-    .job-position:hover{
-        color: $primary-color;
-        cursor: pointer;
-        
-    }
+    
     .job-info{
         & > *{
             margin-top: .5em;
@@ -67,9 +65,7 @@
         width: 85%;
         border-bottom: 1px $info-color solid;
         opacity: 50%;
-        
     }
-    
 }
 .featured-card{
     height: auto;
@@ -81,13 +77,11 @@
 }
 
 @media screen and (min-width: 960px){
-    
     .job-card{
-        
         .job-card-wrapper{
             @include flexContent(center, flex-start, row);
             .company-logo{
-                margin-top: 1.5em;
+                margin-top: 2em;
                 margin-left:0;
                 img {
                     width: clamp(2em, 6vw, 30vh);
@@ -95,6 +89,7 @@
             }
             .info{
                 flex-grow: 1;
+                margin-bottom: 1em;
             }
         }
         .job-additional-info{

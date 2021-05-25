@@ -26,12 +26,10 @@ function Button (props){
     }
 
     const removeAll = () =>{
-        
         setFilter({
             current: []
         })
     }
-
 
     if(props.op === 'add'){
         return <button className="filter" onClick={() => addFilter(props.value)}>{props.value}</button>

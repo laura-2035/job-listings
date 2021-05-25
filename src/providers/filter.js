@@ -15,6 +15,5 @@ export const FilterProvider = (props) =>{
         </FilterContext.Provider>
     )
 }
-
 //Creating a customized hook
 export const useFilter = () => React.useContext(FilterContext)

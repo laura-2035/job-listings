@@ -12,12 +12,20 @@
         background-color: $primary-color;
         color: white;
         cursor: pointer;
-        animation: bounce 400ms;
+        animation: pulse 500ms;
     }
-    &:active{
-        animation: bounce 200ms;
-        
+   
+}
+.filter-block{
+    display: inline-flex;
+    margin: 0 1em 1em 0; 
+
+    .filter{
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
+    
 }
 .remove-filter{
     background-color: $primary-color;
@@ -27,8 +35,9 @@
     &:hover{
         background-color: $job-title-color;
         cursor: pointer;
-        
+        animation: pulseRemove 500ms;
     }
+   
 }
 .clear-button{
     border: none;

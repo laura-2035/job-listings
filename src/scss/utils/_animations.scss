@@ -1,3 +1,5 @@
+@import './variables';
+
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -6,3 +8,29 @@
     from{transform: scale(1);}
     to{transform: scale(1.1);}
 }
+@keyframes pulse{
+    0% {
+        background-color: $filter-color;
+    }
+    100% {
+        background-color: $primary-color;
+    }
+}
+@keyframes pulseRemove{
+    0% {
+        background-color: $primary-color;
+    }
+    100% {
+        background-color: $job-title-color;
+    }
+}
+@keyframes pulsePosition {
+    0% {
+        color: $job-title-color;
+    }
+    100% {
+        color: $primary-color;
+    }
+}
+
+

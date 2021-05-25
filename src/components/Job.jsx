@@ -11,7 +11,6 @@ const Job = () => {
 
 	const filterList = [...filters.current]
 	const getJobs = () => {
-		// const excludeColumns = ['id', 'company', 'logo', 'new', 'featured', 'position', 'postedAt', 'contract', 'location']
 		//Get jobs with filters
 		const getJobsByFilter = () => {
 			if (filterList.length === 0) {
@@ -24,7 +23,6 @@ const Job = () => {
 					return jobCardRender(job)
 				})
 			} else {
-
 				return JobData.map((job) => {
 					//Adding tag to jobs objects
 					Object.assign(job, {
@@ -35,23 +33,9 @@ const Job = () => {
 					})
 
 					return jobHasFilters ? jobCardRender(job) : false
-
+					
 				})
-
-				// let filteredData
-				// // console.log('------------------Iteração do:', filterItem)
-				// filteredData = JobData.filter(item => {
-				// 	console.log('-------------Item ', item)
-				// 	return Object.keys(item).some(key => {
-				// 		console.log('==========Key ',key)
-				// 		return excludeColumns.includes(key) ? false : item[key].toString().includes(filterList)
-				// 	})
-				// })
-				// return filteredData.map((job) => {
-				// 	return jobCardRender(job)
-				// })
 			}
-
 		}
 		return (
 			<div className="job-wrapper">
@@ -61,7 +45,6 @@ const Job = () => {
 	}
 
 	const jobCardRender = (job) => {
-		//Need to rewrite the code, using a map to display the elements
 		const renderNew = () => {
 			if (job.new) {
 				return <div className="job-tag new">New!</div>
@@ -78,23 +61,11 @@ const Job = () => {
 				return <div className="featured-card"></div>
 			}
 		}
-
-
-		const renderLanguages = job.languages.map((lang) => {
-			//Obtaining the languages
-			// arrayLangTools = !arrayLangTools.includes() ? arrayLangTools.push(lang) : ''
-			return <Button value={lang} op="add"></Button>
+		const renderFilters = job.filters.map((filters) => {
+			return <Button value={filters} op="add"></Button>
 		})
-		const renderTools = job.tools.map((tools) => {
-			//Obtaining the tools
-			// arrayLangTools = !arrayLangTools.includes() ? arrayLangTools.push(tools) : ''
-			return <Button value={tools} op="add"></Button>
-		})
-
 		return (
-
 			<div className="job-card">
-
 				{renderFeaturedCard()}
 				<div className="job-card-wrapper">
 					<div className="company-logo">
@@ -121,10 +92,7 @@ const Job = () => {
 					</div>
 					<div className="divider"></div>
 					<div className="filter-tags">
-						<Button value={job.role} op="add"></Button>
-						<Button value={job.level} op="add"></Button>
-						{renderLanguages}
-						{renderTools}
+						{renderFilters}
 					</div>
 				</div>
 

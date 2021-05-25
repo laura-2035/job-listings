@@ -25,7 +25,7 @@ function Filter() {
                 </div>
             )
         }else{
-            return <div></div>
+            return false
         }
     }
     return(renderFilters())
