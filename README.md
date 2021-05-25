@@ -85,11 +85,10 @@ Organize my CSS with more variables and reusable code.
 ### Useful resources
 
 - [Example resource 1](https://www.cluemediator.com/search-filter-for-multiple-object-in-reactjs) - This helped me on my first attempt, and thanks for this example a learned about some() and every().
-- [Example resource 2](https://reactjs.org/docs/context.html)
-- [Example resource 3](https://reactjs.org/docs/hooks-state.html)
-- [Example resource 4](https://reactjs.org/docs/context.html#contextprovider)
-  React documentation explaining about Context, Hooks and Provider, very useful if you are beginner.
-- [Example resource 3](https://desenvolvimentoparaweb.com/javascript/every-some-find-includes-javascript/) - Article in PORTUGUESE explaining about the every(), some(), find() and includes() methods 
+- [Example resource 2](https://reactjs.org/docs/context.html) React documentation explaining about Context
+- [Example resource 3](https://reactjs.org/docs/hooks-state.html) React documentation explaining about Hooks
+- [Example resource 4](https://reactjs.org/docs/context.html#contextprovider) React documentation explaining about Provider
+- [Example resource 5](https://desenvolvimentoparaweb.com/javascript/every-some-find-includes-javascript/) - Article in PORTUGUESE explaining about the every(), some(), find() and includes() methods 
 
 ## Author
 
