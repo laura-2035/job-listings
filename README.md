@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Job Listings with filtering](https://github.com/laura-2035/job-listings)
-- Live Site URL: (https://laura-2035-job-list.netlify.app/)
+- Solution URL: [Job Listings with filtering](https://github.com/matiussi-2035/job-listings)
+- Live Site URL: (https://matiussi-2035-job-listings.netlify.app/)
 
 ## My process
 
@@ -92,8 +92,7 @@ Organize my CSS with more variables and reusable code.
 
 ## Author
 
-- Github - (https://github.com/laura-2035)
-- Frontend Mentor - [@laura-2035](https://www.frontendmentor.io/profile/laura-2035)
+- Github - (https://github.com/matiussi-2035)
 
 ## Acknowledgments
 
